@@ -18,6 +18,7 @@ import {Connection} from "../connection/Connection";
 import {SapDriver} from "./sap/SapDriver";
 import {BetterSqlite3Driver} from "./better-sqlite3/BetterSqlite3Driver";
 import {CapacitorDriver} from "./capacitor/CapacitorDriver";
+import {SnowflakeDriver} from "./snowflake/Snowflake";
 
 /**
  * Helps to create drivers.
@@ -66,12 +67,14 @@ export class DriverFactory {
                 return new AuroraDataApiPostgresDriver(connection);
             case "capacitor":
                 return new CapacitorDriver(connection);
+            case "snowflake":
+                return new SnowflakeDriver(connection);
             default:
                 throw new MissingDriverError(
                     type,
                     [
                         "cordova", "expo", "mariadb", "mongodb", "mssql", "mysql", "oracle", "postgres",
-                        "sqlite", "better-sqlite3", "sqljs", "react-native", "aurora-data-api", "aurora-data-api-pg"
+                        "sqlite", "better-sqlite3", "sqljs", "react-native", "aurora-data-api", "aurora-data-api-pg", "snowflake"
                     ]
                 );
         }

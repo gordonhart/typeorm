@@ -22,6 +22,7 @@
     "./browser/driver/mongodb/MongoQueryRunner.js": "./browser/platform/BrowserDisabledDriversDummy.js",
     "./browser/entity-manager/MongoEntityManager.js": "./browser/platform/BrowserDisabledDriversDummy.js",
     "./browser/repository/MongoRepository.js": "./browser/platform/BrowserDisabledDriversDummy.js",
+    "./browser/driver/snowflake/SnowflakeQueryRunner.js": "./browser/platform/BrowserDisabledDriversDummy.js",
     "./browser/driver/sqlite/SqliteDriver.js": "./browser/platform/BrowserDisabledDriversDummy.js",
     "./browser/driver/better-sqlite3/BetterSqlite3Driver.js": "./browser/platform/BrowserDisabledDriversDummy.js",
     "./browser/util/DirectoryExportedClassesLoader.js": "./browser/platform/BrowserDirectoryExportedClassesLoader.js",
@@ -128,6 +129,7 @@
     "pg-native": "*",
     "pg-query-stream": "*",
     "redis": "*",
+    "snowflake-sdk": "*",
     "sql.js": "*",
     "sqlite3": "*",
     "typeorm-aurora-data-api-driver": "*"
@@ -170,6 +172,9 @@
       "optional": true
     },
     "redis": {
+      "optional": true
+    },
+    "snowflake-sdk": {
       "optional": true
     },
     "sql.js": {
